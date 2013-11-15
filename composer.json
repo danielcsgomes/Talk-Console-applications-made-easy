@@ -1,0 +1,22 @@
+{
+    "homepage": "https://github.com/danielcsgomes/Talk-Console-applications-made-easy",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Daniel Gomes",
+            "email": "me@danielcsgomes.com"
+        }
+    ],
+    "require": {
+        "symfony/console": "2.3.*@dev"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "3.7.*@dev"
+    },
+    "autoload": {
+        "classmap": ["src/", "vendor/"],
+        "psr-0": {
+            "DCSG\\": "src/"
+        }
+    }
+}

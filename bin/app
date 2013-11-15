@@ -1,0 +1,12 @@
+#!/usr/bin/env php
+
+<?php
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use DCSG\Command\HelloWorldCommand;
+use Symfony\Component\Console\Application;
+
+$app = new Application('My Console App', '0.0.1');
+$app->add(new HelloWorldCommand());
+$app->run();
