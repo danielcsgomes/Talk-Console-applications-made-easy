@@ -11,7 +11,7 @@ class AskAndValidateCommand extends Command
 {
     protected function configure()
     {
-        $this->setName('helpers:dialog')
+        $this->setName('examples:dialog')
             ->setDescription('Ask and Validate Helper')
             ->addArgument('first_name', InputArgument::REQUIRED, 'Your first name')
             ->addArgument('last_name', InputArgument::REQUIRED, 'Your last name');
@@ -26,7 +26,7 @@ class AskAndValidateCommand extends Command
     }
 
     protected function interact(InputInterface $input, OutputInterface $output) {
-        $firstName= $this->getHelper('dialog')->askAndValidate(
+        $firstName = $this->getHelper('dialog')->askAndValidate(
             $output,
             'Insert your first name: ',
             function ($firstName) {

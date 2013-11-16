@@ -10,7 +10,7 @@ class ProgressHelperCommand extends Command
 {
     protected function configure()
     {
-        $this->setName('helpers:progress')
+        $this->setName('examples:progress')
             ->setDescription('Progress Helper example');
     }
 

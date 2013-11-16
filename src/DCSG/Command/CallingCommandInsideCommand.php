@@ -12,7 +12,7 @@ class CallingCommandInsideCommand extends Command
 {
     protected function configure()
     {
-        $this->setName('example:calling:command')
+        $this->setName('examples:calling:command')
             ->setDescription('Example of calling a Command inside another Command.');
     }
 

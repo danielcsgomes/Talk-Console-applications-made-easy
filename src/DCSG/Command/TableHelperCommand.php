@@ -10,7 +10,7 @@ class TableHelperCommand extends Command
 {
     protected function configure()
     {
-        $this->setName('helpers:table')
+        $this->setName('examples:table')
             ->setDescription('Table Helper example');
     }
 

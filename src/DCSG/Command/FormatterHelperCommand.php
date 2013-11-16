@@ -11,7 +11,7 @@ class FormatterHelperCommand extends Command
 {
     protected function configure()
     {
-        $this->setName('helpers:formatter')
+        $this->setName('examples:formatter')
             ->setDescription('Formatter Helper examples');
     }
 
@@ -20,7 +20,7 @@ class FormatterHelperCommand extends Command
         $formatter = $this->getHelperSet()->get('formatter');
 
         $formattedLine = $formatter->formatSection(
-            'SomeSection',
+            'My Section',
             'Here is some message related to that section'
         );
         $output->writeln($formattedLine);
