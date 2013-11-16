@@ -1,5 +1,5 @@
 <?php
-
+// path/to/src/DCSG/Command/HelloWorldCommand.php
 namespace DCSG\Command;
 
 use Symfony\Component\Console\Command\Command;
@@ -26,7 +26,6 @@ EOF
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-
         $name = $input->getArgument('name');
 
         if ($input->getOption('uppercase')) {
