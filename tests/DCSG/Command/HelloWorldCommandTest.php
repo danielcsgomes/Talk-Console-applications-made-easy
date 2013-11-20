@@ -27,10 +27,7 @@ class HelloWorldCommandTest extends \PHPUnit_Framework_TestCase
 
     public function testOutputNameInUppercase()
     {
-        $application = new Application();
-        $application->add(new HelloWorldCommand());
-
-        $command = $application->find('hello:world');
+        $command = new HelloWorldCommand();
         $commandTester = new CommandTester($command);
         $commandTester->execute(
             array(

@@ -17,9 +17,8 @@ class HelloWorldCommand extends Command
         $this->addArgument('name', InputArgument::REQUIRED, 'Your name');
         $this->addOption('uppercase', 'u');
 
-        $this->setHelp(
-            <<<EOF
-            This is a simple command that outputs <info>Hello world</info> 'Your Name'.
+        $this->setHelp(<<<EOF
+This is a simple command that outputs <info>Hello world</info> 'Your Name'.
 EOF
         );
     }

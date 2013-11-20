@@ -17,6 +17,7 @@ use DCSG\Command\DumpDatabaseDICommand;
 use DCSG\Command\FormatterHelperCommand;
 use DCSG\Command\HelloWorldCommand;
 use DCSG\Command\ProgressHelperCommand;
+use DCSG\Command\SelectDialogCommand;
 use DCSG\Command\TableHelperCommand;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\Console\Application as BaseApplication;
@@ -54,6 +55,7 @@ class Application extends BaseApplication implements ContainerAwareInterface
         $this->add(new CallingCommandInsideCommand());
         $this->add(new FormatterHelperCommand());
         $this->add(new CatchSignalsCommand());
+        $this->add(new SelectDialogCommand());
     }
 
     /**
