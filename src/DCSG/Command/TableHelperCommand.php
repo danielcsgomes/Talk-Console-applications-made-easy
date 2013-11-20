@@ -21,10 +21,10 @@ class TableHelperCommand extends Command
             ->setHeaders(array('Color', 'HEX'))
             ->setRows(
                 array(
-                     array('Red', '#ff0000'),
-                     array('Blue', '#0000ff'),
-                     array('Green', '#008000'),
-                     array('Yellow', '#ffff00')
+                    array('Red', '#ff0000'),
+                    array('Blue', '#0000ff'),
+                    array('Green', '#008000'),
+                    array('Yellow', '#ffff00')
                 )
             );
         $table->render($output);

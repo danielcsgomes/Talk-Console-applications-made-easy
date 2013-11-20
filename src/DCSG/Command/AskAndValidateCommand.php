@@ -25,7 +25,8 @@ class AskAndValidateCommand extends Command
         $output->writeln("Your name is <info>{$firstName} {$lastName}</info>");
     }
 
-    protected function interact(InputInterface $input, OutputInterface $output) {
+    protected function interact(InputInterface $input, OutputInterface $output)
+    {
         $firstName = $this->getHelper('dialog')->askAndValidate(
             $output,
             'Insert your first name: ',

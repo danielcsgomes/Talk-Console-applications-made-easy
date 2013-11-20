@@ -1,0 +1,9 @@
+parameters:
+    database.name: 'YOUR DATABASE NAME'
+    database.host: 'HOST'
+    database.user: 'USERNAME'
+    database.password: 'PASSWORD'
+
+    backup.databases:
+        - dbA
+        - dbB
