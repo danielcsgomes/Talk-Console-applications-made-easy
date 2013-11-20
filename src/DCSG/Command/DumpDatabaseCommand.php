@@ -43,7 +43,7 @@ class DumpDatabaseCommand extends Command
         exec($mysqldump, $execOutput, $exitCode);
 
         if (0 === $exitCode) {
-            $message = "<info>Success</info>";
+            $message = "<info>Databases dumped with success.</info>";
         } else {
             $message = "<error>Error with exit code: {$exitCode}";
         }
@@ -122,7 +122,7 @@ EOF;
 
         $this->host = $dialog->askAndValidate($output, 'host: ', $isEmpty);
         $this->user = $dialog->askAndValidate($output, 'username: ', $isEmpty);
-        $this->password = $dialog->askAndValidate($output, 'password: ', $isEmpty);
+        $this->password = $dialog->askHiddenResponseAndValidate($output, 'password: ', $isEmpty);
         $this->dbnames = $dialog->askAndValidate($output, 'databases separate by space: ', $isEmpty);
     }
 }
