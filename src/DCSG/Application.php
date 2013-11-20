@@ -24,6 +24,7 @@ use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
+use Symfony\Component\DependencyInjection\Reference;
 
 class Application extends BaseApplication implements ContainerAwareInterface
 {
@@ -81,6 +82,12 @@ class Application extends BaseApplication implements ContainerAwareInterface
         );
 
         $container = new ContainerBuilder();
+        $container->register('logger', '%logger.class%')
+            ->setArguments(array('%logger.name%'))
+            ->addMethodCall('pushHandler', array(new Reference('logger.handler')));
+
+        $container->register('logger.handler', '%logger.handler.class%')
+            ->setArguments(array('%logger.log_path%'));
 
         $loader = new YamlFileLoader($container, new FileLocator($configDirectories));
         $loader->load('parameters.yaml');

@@ -30,6 +30,8 @@ class DumpDatabaseDICommand extends BaseCommand
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
+        $logger = $this->container->get('logger');
+
         $mysqldump = $this->composeExecCommand($this->getOptions($input));
 
         $exitCode = 0;
@@ -38,8 +40,10 @@ class DumpDatabaseDICommand extends BaseCommand
 
         if (0 === $exitCode) {
             $message = "<info>Success</info>";
+            $logger->addInfo('Databases dumped with success');
         } else {
             $message = "<error>Error with exit code: {$exitCode}";
+            $logger->addCritical('Error dumping databases.');
         }
 
         $output->writeln($message);

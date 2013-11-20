@@ -7,3 +7,8 @@ parameters:
     backup.databases:
         - dbA
         - dbB
+
+    logger.class: 'Monolog\Logger'
+    logger.name: 'logger'
+    logger.handler.class: 'Monolog\Handler\StreamHandler'
+    logger.log_path: '/tmp/'

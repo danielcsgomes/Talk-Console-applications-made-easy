@@ -30,7 +30,7 @@ class DumpDatabaseCommand extends Command
             ->addOption('add-drop-database')
             ->addOption('add-drop-table')
             ->setHelp(
-                'The <info>database:dump</info> will dump all tables.'
+                'The <info>database:dump</info> will dump the specified databases.'
             );
     }
 
