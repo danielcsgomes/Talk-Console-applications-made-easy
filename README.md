@@ -25,6 +25,9 @@ php composer.phar install --dev
 # Run the application
 ./bin/app
 
+# Run the application with dependency injection in DumpDatabase Command
+./bin/app-di
+
 # Run tests:
 ./vendor/bin/phpunit
 
