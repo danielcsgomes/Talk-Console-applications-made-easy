@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This file is part of the examples package.
+ * This file is part of the Talk - Console applications made easy package.
  *
  * (c) Daniel Gomes <me@danielcsgomes.com>
  *
@@ -16,7 +16,7 @@ use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
- * This file is part of the examples package.
+ * This file is part of the Talk - Console applications made easy package.
  *
  * (c) Daniel Gomes <me@danielcsgomes.com>
  *
